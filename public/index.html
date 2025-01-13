@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>김지예</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
+		<!-- update the version number as needed -->
+		<script defer src="/__/firebase/9.14.0/firebase-app-compat.js"></script>
+		<!-- include only the Firebase features as you need -->
+		<script defer src="/__/firebase/9.14.0/firebase-auth-compat.js"></script>
+		<script defer src="/__/firebase/9.14.0/firebase-database-compat.js"></script>
+		<script defer src="/__/firebase/9.14.0/firebase-firestore-compat.js"></script>
+		<script defer src="/__/firebase/9.14.0/firebase-functions-compat.js"></script>
+		<script defer src="/__/firebase/9.14.0/firebase-messaging-compat.js"></script>
+		<script defer src="/__/firebase/9.14.0/firebase-storage-compat.js"></script>
+		<script defer src="/__/firebase/9.14.0/firebase-analytics-compat.js"></script>
+		<script defer src="/__/firebase/9.14.0/firebase-remote-config-compat.js"></script>
+		<script defer src="/__/firebase/9.14.0/firebase-performance-compat.js"></script>
+		<script defer src="/__/firebase/init.js?useEmulator=true"></script>
+	</head>
+	<script>
+function getUpdatedExperience(initialYears, initialMonths, lastUpdatedDate) {
+  const lastDate = new Date(lastUpdatedDate);
+  const now = new Date();
+
+  // 지난 시간 계산
+  let diffYears = now.getFullYear() - lastDate.getFullYear();
+  let diffMonths = now.getMonth() - lastDate.getMonth();
+
+  // 월 차이가 음수인 경우 연도 빌림 처리
+  if (diffMonths < 0) {
+    diffYears--;
+    diffMonths += 12;
+  }
+
+  // 기존 경력에 추가
+  const totalYears = initialYears + diffYears;
+  const totalMonths = initialMonths + diffMonths;
+
+  // 월 단위가 12 이상인 경우 추가로 연도 증가
+  const finalYears = totalYears + Math.floor(totalMonths / 12);
+  const finalMonths = totalMonths % 12;
+
+  return `${finalYears}년 ${finalMonths}개월`;
+}
+
+	window.onload = function() {
+		
+		var tmp = '경력 : 약 '+getUpdatedExperience(6, 5, "2024-12-01");
+		if(!tmp) {
+			tmp = '경력 : 약 6년 6개월.';
+		}
+		document.getElementById('years').innerText = 
+	}
+	</script>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<span class="image avatar"><img src="img/IMG_6105.jpg" alt="" /></span>
+					<h1 id="logo"><a href="#">김지예</a></h1>
+					<p>web developer<br />
+					Last Updated : 2025년 10월</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">ABOUT ME</a></li>
+						<li><a href="#two">SKILLS</a></li>
+						<li><a href="#four">EXPERIENCE</a></li>
+						<li><a href="#five">CAREER</a></li>
+						<li><a href="#three">PROJECTS</a></li>
+					</ul>
+				</nav>
+				<footer>
+					<!--
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					-->
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="image main" data-position="center">
+									<img src="images/banner.jpg" alt="" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>ABOUT ME</h2>
+										<p>안녕하세요. 웹 개발자 김지예입니다.</p>
+										<ul>
+											<li>새로운 기술을 배우는 노력을 하며, 효율적인 로직을 위해 고민합니다.</li>
+											<li>건강한 의사소통을 위해 노력합니다.</li>
+											
+										</ul>
+										<p style="font-size: 20px;" id="years">
+											경력 : 약 6년 6개월
+										</p>
+										<p style="font-size: 20px;">
+											이메일 : zzyes95@gmail.com
+										</p>
+										<p>
+											github : <a href="https://github.com/zzeeye" target="_blank" class="fa fa-github" style="font-size: 50px;"></a>&nbsp;&nbsp;&nbsp;
+											<br/><br/>
+											tistory : <a href="https://hana0511.tistory.com" target="_blank"><img src="images/tistory.png" style="width: 40px;"/></a>
+											<br/>
+										</p>
+									</header>
+									<p>
+										
+									</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<header class="major"><h2>SKILLS</h2></header>
+									<img src="img/skill.PNG" style="width: 100%;"/>
+									<p></p>
+									<ul class="feature-icons">
+										<li class="icon solid fa-code">Java, Python</li>
+										<li class="icon solid fa-terminal">Spring Framework, Django</li>
+										<li class="icon solid fa-file-code">Github</li>
+										<li class="icon solid fa-code-branch">git, SVN</li>
+										<li class="icon solid fa-laptop-code">Oracle, MySQL, PostgreSQL</li>
+										<li class="icon solid fa-bug">eclipse, vscode</li>
+									</ul>
+								</div>
+							</section>
+						
+						<!-- four -->
+						<section id="four">
+							<div class="container">
+								<header class="major"><h2>EXPERIENCE</h2></header>
+
+								<h3>멀티캠퍼스 빅데이터 교육 수료</h3>
+								<blockquote>
+									기간 : 2022. 06. 30. ~ 2022. 11. 30. (890시간)<br/>
+									멀티잇 "서비스 산업 데이터를 활용한 빅데이터 분석" 과정 수료<br/>
+									프로젝트 최우수상 수상<br/>
+									우수훈련생 우수상 수상<br/><br/>
+									파이썬 프로그래밍 · 알고리즘 · 데이터베이스/SQL<br/>
+									웹크롤링/Rest API를 활용한 데이터 수집 · Matplotlib, Seaborn을 활용한 데이터 시각화<br/>
+									머신러닝 이론 및 실습(Logistic Regression, NBC, SVM, Random Forest, KNN)<br/>
+									딥러닝 이론 및 실습(NN, CNN, RNN, Word2Vec, FastText, BERT 등)<br/>
+								</blockquote>
+
+								<h3>빅데이터 분석을 위한 통계 알고리즘</h3>
+								<blockquote>
+									기간 : 2019. 10. 10. ~ 2019. 10. 11. (16시간)<br/>
+									기관 : KITRI 한국정보기술연구원
+								</blockquote>
+
+								<h3>고등학생 대상 Java 기초 강의 및 상담 멘토링 활동</h3>
+								<blockquote>
+									기간 : 2017. 11. 4.<br/>
+									주최 : 대전YMCA
+								</blockquote>
+
+								<h3>대덕인재개발원 교육 수료</h3>
+								<blockquote>
+									기간 : 2017. 07. 24. ~ 2018. 02. 20. (1120시간)<br/>
+									대덕인재개발원 "전자정부 표준프레임워크 응용SW 개발자과정(NCS 7기)" 과정 수료<br/>
+									프로젝트 우수상 수상
+								</blockquote>
+
+								<h3>내손으로 만드는 사물인터넷 아두이노 DIY 프로젝트</h3>
+								<blockquote>
+									기간 : 2015. 07. ~ 2015. 08.<br/>
+									주최 : 대전창조경제혁신센터
+								</blockquote>
+								
+								<h3>모바일 웹앱 시제품 개발 캠프</h3>
+								<blockquote>
+									기간 : 2015. 06. ~ 2015. 07.<br/>
+									주최 : 한남대학교 창업지원단
+								</blockquote>
+							</div>
+						</section>
+
+						<!-- five -->
+						<section id="five">
+							<div class="container">
+								<header class="major"><h2>CAREER</h2></header>
+								
+								<h4 style="color: ;">시선소프트 2024-09 ~ (재직중)</h4>
+								
+								<h3>축산 스마트팜 빅데이터 플랫폼 구축사업</h3>
+								<h5 style="color: #98A8B9;">2024-09-09 ~ 2025-03 예정</h5>
+								<blockquote>
+									▸프로젝트 내용<br/>
+									: 축산 스마트팜 빅데이터 플랫폼 구축사업<br/><br/>
+
+									▸주요 수행내용<br/>
+									: ICT수집 데이터 마트데이터 수집 Batch 제작<br/>
+									: SBChart(softbowl제품) 활용 차트 시각화<br/>
+									: 유지보수 관련 기능 개선<br/><br/>
+
+									▸개발 환경<br/>
+									Windows / postgreSQL,Oracle 12c / Eclipse, Dbeaver / JAVA / eGovFrame, Mybatis<br/><br/>
+								</blockquote>
+
+								<h4 style="color: ;">로다아이티 2023-01 ~ 2024-09</h4>
+								
+								<h3>청주시 데이터허브플랫폼 구축</h3>
+								<h5 style="color: #98A8B9;">2023-08-10 ~ 2024-06-28</h5>
+								<blockquote>
+									▸프로젝트 내용<br/>
+									: 청주시 데이터허브플랫폼 구축 사업<br/><br/>
+
+									▸주요 수행내용<br/>
+									: 데이터 구조 설계, ERD 산출물 작성 및 스키마 최적화<br/>
+									: 개발단계 주도(프로젝트 공통 및 세부기능 구현, 개발 산출물 작성)<br/>
+									: sgis 지도 api 프로젝트 적용 및 시각화<br/>
+									: amcharts 5 공통화 적용 및 시각화<br/>
+									: api 데이터 수집 연계 관련 기능 개선 및 적용<br/><br/>
+
+									▸개발 환경<br/>
+									Windows / postgreSQL / Eclipse, Dbeaver / JAVA / eGovFrame, ibatis<br/><br/>
+									
+									※ 위 내용 중 영동군,청주시 프로젝트는 동일한 구축 환경에서 개발이 진행되었으며 대부분의 공통기능을 공유하여 같은 기간 내에 2개 프로젝트를 수행함.<br/>
+										각 발주기관 요구사항에 따라 세부 기능은 별도로 개발함<br/>
+								</blockquote>
+								
+								
+								<h3>영동군 스마트 데이터 플랫폼 구축 사업</h3>
+								<h5 style="color: #98A8B9;">2023-08-02 ~ 2024-03-29</h5>
+								<blockquote>
+									▸프로젝트 내용<br/>
+									: 영동군 스마트 데이터 플랫폼 구축 사업<br/><br/>
+
+									▸주요 수행내용<br/>
+									: 데이터 구조 설계, ERD 산출물 작성 및 스키마 최적화<br/>
+									: 개발단계 주도(프로젝트 공통 및 세부기능 구현, 개발 산출물 작성)<br/>
+									: sgis 지도 api 프로젝트 적용 및 시각화<br/>
+									: amcharts 5 공통화 적용 및 시각화<br/>
+									: api 데이터 수집 연계 관련 기능 개선 및 적용<br/><br/>
+
+									▸개발 환경<br/>
+									Windows / postgreSQL / Eclipse, Dbeaver / JAVA / eGovFrame, ibatis<br/>
+								</blockquote>
+								
+								
+								<h3>국방과학연구소 e감사시스템 웹 취약점 점검 및 개선 용역</h3>
+								<h5 style="color: #98A8B9;">2023-06 ~ 2023-07</h5>
+								<blockquote>
+									웹 취약점 점검 조치<br/>
+								</blockquote>
+								
+								
+								<h4 style="color: ;">크루메이트 2018-03 ~ 2022-06 (4년 4개월)</h4>
+
+								<h3>국가기록원 기록물관리정보시스템 통합유지보수</h3>
+								<h5 style="color: #98A8B9;">2021-09 ~ 2022-06</h5>
+								<blockquote>
+									국가기록원 기록물관리정보시스템 통합유지보수<br/>
+									사용스택 : Java, 전자정부프레임워크, ibatis, Oracle<br/><br/>
+
+									운영사이트 에러사항 원인파악 및 조치<br/>
+									사용자 문의 응대<br/>
+									대용량송수신 모듈 연계 관리<br/>
+									기록물 관련 데이터추출<br/>
+									웹기록물수집기 관리<br/>
+									프로젝트 업무 일감관리 사이트 관리<br/>
+								</blockquote>
+
+								<h3>CJ온스타일 운영</h3>
+								<h5 style="color: #98A8B9;">2019-10 ~ 2021-05</h5>
+								<blockquote>
+									CJ온스타일 운영<br/>
+									사용스택 : Java, Spring, mybatis, MYSQL(HeidiSQL), Oracle(SQL Developer)<br/><br/>
+									출석체크 이벤트개발<br/>
+									모니터링 배치 문자 발송관리<br/>
+									카톡 공유 관련 이벤트 개발<br/>
+									선착순 이벤트 개발<br/>
+									실시간 래플 이벤트 개발<br/>
+									이벤트 관련 데이터 추출<br/>
+									(전시)Google Analytics 360 설치<br/>
+								</blockquote>
+
+								<h3>ABC-MART 개발운영</h3>
+								<h5 style="color: #98A8B9;">2018-09 ~ 2019-09</h5>
+								<blockquote>
+									ABC-MART 온라인 사이트 개발 및 운영.<br/>
+									사용 스택 : Java, Spring, Jsp, HTML, jQuery, JavaScript, MSSQL<br/><br/>
+									쿠폰 적용 불가 상품 리스트 Admin, 운영 기능 개발.<br/>
+									페이스북 스크립트 픽셀 코드 설치.<br/>
+									Mssql 프로시져 수정<br/>
+									광고api설치<br/>
+									
+								</blockquote>
+
+								<h3>네파몰 고도화</h3>
+								<h5 style="color: #98A8B9;">2018-05 ~ 2018-08</h5>
+								<blockquote>
+									네파몰 고도화<br/>
+									사용 스택 : Java, Spring, Jsp, HTML, jQuery, JavaScript, Oracle<br/><br/>
+									관리자 사이트의 각종 통계조건검색을 위한 화면, Java,<br/>
+									Admin의 통계 조건검색 back / front.<br/>
+									오픈 이전 테스트.<br/>
+									
+								</blockquote>
+
+							</div>
+						</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<header class="major"><h2>PROJECTS</h2></header>
+									<p></p>
+									<div class="features">
+										<article>
+											<a href="javascript:void(0);" class="image"><img src="img/img3.PNG" alt="" onclick="window.open(this.src)"/></a>
+											<a href="javascript:void(0);" class="image"><img src="img/img2.PNG" alt="" onclick="window.open(this.src)"/></a>
+											<br/><br/>
+											<div>
+												<h4>딥러닝 모델을 통한 클릭베이트 기사 감지</h4>
+												<ul>
+													<li>멀티캠퍼스 교육 과정 중 최종 프로젝트</li>
+													<li>사용한 기술 : Django, SQLite, gunicorn, NGINX, WSL2, crontab</li>
+													<li>Front-End: HTML, CSS, Javascript, Ajax, jQuery</li>
+													
+													<li>주요 기능
+														<ul style="list-style-type:circle;margin:3px;">
+															<li>독자들에게 뉴스 제목과 본문의 일관성, 제목의 낚시성 등을 예측하고 점수를 제시하는 클릭베이트 기사 탐지 시스템 및 웹사이트 구현</li>
+															<li>이러한 시스템은 올바른 뉴스 기사를 선택할 수 있도록 하여 바람직한 뉴스 생태계를 만드는데 기여</li>
+															<li><a href="https://github.com/Yedam101/finalProject">https://github.com/Yedam101/finalProject</a></li>
+														</ul>
+													</li>
+													<li>팀 구성 : 5명</li>
+													<li>역할 : 환경구축, 워드클라우드, crontab, DB기획</li>
+												</ul>
+											</div>
+										</article>
+									</div>
+									<hr/>
+									<div class="features">
+										<article>
+											<a href="javascript:void(0);" class="image"><img src="img/semi1.png" alt="" onclick="window.open(this.src)" style="width:100%;"/></a>
+											<br/><br/>
+											<div>
+												<h4>ReviewTicon(리뷰티콘)</h4>
+												<ul>
+													<li>멀티캠퍼스 교육 과정 중 세미 프로젝트</li>
+													<li>Crawling: Celenium, BeautifulSoup</li>
+													<li>Data:Numpy, Pandas, Tensorflow, Konply</li>
+													<li>Front-End: HTML, CSS, Javascript, Ajax, jQuery</li>
+													<li>Back-End: Python3, Django, SQLite, Apache2.4, mod_wsgi, Flask</li>
+													
+													<li>주요 기능
+														<ul style="list-style-type:circle;margin:3px;">
+															<li>Django 를 활용한 영화 리뷰 이모티콘 분류기 웹사이트</li>
+															<li><a href="https://github.com/jo-soobin/Reviewticon">https://github.com/jo-soobin/Reviewticon</a></li>
+														</ul>
+													</li>
+													<li>팀 구성 : 5명</li>
+													<li>역할 : 환경구축, DB기획, front-end, back-end</li>
+												</ul>
+											</div>
+										</article>
+									</div>
+									<hr/>
+									<div class="features">
+										<article>
+											<a href="javascript:void(0);" class="image"><img src="img/img5.PNG" alt="" onclick="window.open(this.src)" style="width:100%;"/></a>
+											<br/><br/>
+											<div>
+												<h4>김지예 포트폴리오</h4>
+												<ul>
+													<li>javascript, Firebase</li>
+													
+													<li>주요 기능
+														<ul style="list-style-type:circle;margin:3px;">
+															<li>간단한 자기소개, 인적사항, 기술스택, 토이프로젝트 게시</li>
+															<li>firebase 를 사용한 호스팅, html 파일을 직접 만듦</li>
+															<li><a href="https://zzeeye-portfolio.web.app">https://zzeeye-portfolio.web.app</a></li>
+														</ul>
+													</li>
+												</ul>
+											</div>
+										</article>
+									</div>
+									
+									
+									
+								</div>
+								
+							</section>
+
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+		<script>
+		  document.addEventListener('DOMContentLoaded', function() {
+			const loadEl = document.querySelector('#load');
+
+			try {
+			  let app = firebase.app();
+			  let features = [
+				'auth', 
+				'database', 
+				'firestore',
+				'functions',
+				'messaging', 
+				'storage', 
+				'analytics', 
+				'remoteConfig',
+				'performance',
+			  ].filter(feature => typeof app[feature] === 'function');
+			  loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+			} catch (e) {
+			  console.error(e);
+			  loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+			}
+		  });
+		</script>
+
+	</body>
+</html>
